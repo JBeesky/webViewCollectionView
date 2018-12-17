@@ -14,6 +14,8 @@
 		3339742F21C0234F006AFC50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3339742D21C0234F006AFC50 /* LaunchScreen.storyboard */; };
 		3339743A21C0234F006AFC50 /* webviewCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339743921C0234F006AFC50 /* webviewCollectionViewTests.swift */; };
 		3339744521C0234F006AFC50 /* webviewCollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339744421C0234F006AFC50 /* webviewCollectionViewUITests.swift */; };
+		33767B1721C2F5FB00427633 /* collectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33767B1621C2F5FB00427633 /* collectionViewCell.swift */; };
+		33C1788021C5618600348FCA /* UIWebViewSearch.js in Resources */ = {isa = PBXBuildFile; fileRef = 33C1787F21C5618600348FCA /* UIWebViewSearch.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3339744021C0234F006AFC50 /* webviewCollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webviewCollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3339744421C0234F006AFC50 /* webviewCollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webviewCollectionViewUITests.swift; sourceTree = "<group>"; };
 		3339744621C0234F006AFC50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33767B1621C2F5FB00427633 /* collectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewCell.swift; sourceTree = "<group>"; };
+		33C1787F21C5618600348FCA /* UIWebViewSearch.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = UIWebViewSearch.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		3339742321C0234E006AFC50 /* webviewCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				33767B1521C2F5A800427633 /* CollectionView */,
 				3339742421C0234E006AFC50 /* AppDelegate.swift */,
 				3339742621C0234E006AFC50 /* ViewController.swift */,
 				3339742821C0234E006AFC50 /* Main.storyboard */,
 				3339742B21C0234F006AFC50 /* Assets.xcassets */,
 				3339742D21C0234F006AFC50 /* LaunchScreen.storyboard */,
 				3339743021C0234F006AFC50 /* Info.plist */,
+				33C1787F21C5618600348FCA /* UIWebViewSearch.js */,
 			);
 			path = webviewCollectionView;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				3339744621C0234F006AFC50 /* Info.plist */,
 			);
 			path = webviewCollectionViewUITests;
+			sourceTree = "<group>";
+		};
+		33767B1521C2F5A800427633 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				33767B1621C2F5FB00427633 /* collectionViewCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3339742F21C0234F006AFC50 /* LaunchScreen.storyboard in Resources */,
+				33C1788021C5618600348FCA /* UIWebViewSearch.js in Resources */,
 				3339742C21C0234F006AFC50 /* Assets.xcassets in Resources */,
 				3339742A21C0234E006AFC50 /* Main.storyboard in Resources */,
 			);
@@ -257,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3339742721C0234E006AFC50 /* ViewController.swift in Sources */,
+				33767B1721C2F5FB00427633 /* collectionViewCell.swift in Sources */,
 				3339742521C0234E006AFC50 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +316,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		3339742D21C0234F006AFC50 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -433,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EFRXL2SBW5;
 				INFOPLIST_FILE = webviewCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EFRXL2SBW5;
 				INFOPLIST_FILE = webviewCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
