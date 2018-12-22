@@ -34,8 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    let titles = ["Spec Book", "Standard Drawings", "CMS Portal"]
-    let urls = ["http://www.dot.state.oh.us/Divisions/ConstructionMgt/OnlineDocs/Specifications/2016CMS/2016_CMS_04152016_for_web_letter_size_with_SS800_Included.pdf", "http://www.dot.state.oh.us/Divisions/Engineering/Roadway/DesignStandards/roadway/Pages/StandardConstructionDrawing.aspx", "http://www.odotonline.org/cmsportal/"]
+    let titles = ["Spec Book", "Standard Drawings", "CMS Portal", "OSHA Regulations"]
+    let urls = ["http://www.dot.state.oh.us/Divisions/ConstructionMgt/OnlineDocs/Specifications/2016CMS/2016_CMS_04152016_for_web_letter_size_with_SS800_Included.pdf", "http://www.dot.state.oh.us/Divisions/Engineering/Roadway/DesignStandards/roadway/Pages/StandardConstructionDrawing.aspx", "http://www.odotonline.org/cmsportal/", "https://www.osha.gov/laws-regs/regulations/standardnumber/1926"]
 
     
     override func viewDidLoad() {
@@ -44,22 +44,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Formatting
         
+        websiteSelectedMenuView.isHidden = true
+        mainCancelButtonOutlet.isHidden = true
+        
         mainTableView.isHidden = true
         
-        websiteSelectedMenuView.isHidden = true
         findView.isHidden = true
         websiteSelectedView.isHidden = true
         
     }
     
-    
+    @IBOutlet weak var mainSearchButtonOutlet: UIButton!
     @IBAction func mainSearchButton(_ sender: Any) {
+        
         mainTableView.isHidden = false
+        mainCancelButtonOutlet.isHidden = false
+        mainSearchButtonOutlet.isHidden = true
     }
     
-    
+    @IBOutlet weak var mainCancelButtonOutlet: UIButton!
     @IBAction func mainCancelButton(_ sender: Any) {
         mainTableView.isHidden = true
+        mainCancelButtonOutlet.isHidden = true
+        mainSearchButtonOutlet.isHidden = false
+        
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -72,7 +80,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         findView.isHidden = false
     }
 
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titles.count
     }
@@ -91,6 +98,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         mainCancelButton(self)
         collectionView.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.top, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        mainCancelButtonOutlet.isHidden = true
+        mainSearchButtonOutlet.isHidden = false
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
